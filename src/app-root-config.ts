@@ -18,3 +18,11 @@ const layoutEngine = constructLayoutEngine({ routes, applications });
 applications.forEach(registerApplication);
 layoutEngine.activate();
 start();
+
+function sendEvent() {
+  window.dispatchEvent(
+    new CustomEvent("test", { detail: { data: "parent data" } })
+  );
+}
+
+document.getElementById("parent").addEventListener("click", sendEvent);
