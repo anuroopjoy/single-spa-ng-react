@@ -3,7 +3,7 @@ export default function Root(props) {
     <section>
       {props.name} is mounted!
       <br />
-      <a href="/angular">Go to Angular app</a>
+            <a href="#/angular">Go to Angular app</a>
     </section>
   );
 }
