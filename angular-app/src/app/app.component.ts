@@ -14,7 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private renderer: Renderer2) {}
   ngOnInit(): void {
-    getData().then((data: any) => {
+    getData('/data').then((data: any) => {
       console.log('angular ', data);
     });
     this.subscription = state$.subscribe((data: any) => {

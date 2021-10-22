@@ -3,7 +3,7 @@ import { getData, state$ } from "@app/utility";
 
 export default function Root(props) {
   React.useEffect(() => {
-    getData().then((data) => {
+    getData("/data").then((data) => {
       console.log("react ", data);
     });
     const subscription = state$.subscribe((data) => {
